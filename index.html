@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omkar Jadhav | Data Analyst & Technology Specialist</title>
-  <meta name="description" content="Portfolio of Omkar Jadhav - Computer Science Graduate & Data Analyst specializing in Python, SQL, Power BI, and modern AI tools.">
+  <meta name="description" content="Portfolio of Omkar Jadhav - Computer Science graduate specializing in Python, SQL, Power BI, Data Analytics, and AI Tools.">
   <link rel="stylesheet" href="index.css">
+  <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -14,8 +15,8 @@
   <header class="header">
     <nav class="navbar">
       <a href="#hero" class="nav-logo">
-        <span class="logo-box">OJ</span>
-        <span class="logo-text">OMKAR<span><div class=JADAHV></div></span></span>
+        <span class="logo-box">O</span>
+        <span class="logo-text">JADHAV<span>.IO</span></span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
@@ -24,11 +25,11 @@
 
       <ul class="nav-menu" id="navMenu">
         <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#metrics" class="nav-link">Metrics</a></li>
         <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
         <li class="nav-item"><a href="#training" class="nav-link">Training</a></li>
         <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
         <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+        <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         <li class="nav-item nav-cta">
           <a href="images/resume.pdf" class="btn btn-outline-nav" download>
@@ -40,66 +41,27 @@
   </header>
 
   <main>
-    <!-- Dynamic Hero with Interactive Terminal -->
+    <!-- Hero Section -->
     <section id="hero" class="hero-section">
-      <div class="container hero-grid">
+      <div class="container hero-container">
         <div class="hero-content">
-          <div class="status-pill">
-            <span class="status-indicator"></span>
-            <span>Available for Analyst & Tech Roles</span>
-          </div>
-          <h1 class="hero-title">Engineering Data Into Strategic Impact</h1>
-          <p class="hero-subtitle">
-            I am <strong>Omkar Jadhav</strong>, a Computer Science graduate trained in <strong>Python, SQL, Power BI, and Generative AI workflows</strong>. Focused on translating relational datasets into clear business insights.
+          <div class="badge"><i class="fa-solid fa-terminal"></i> Systems & Data Pipeline Ready</div>
+          <h1 class="hero-title">Omkar Jadhav</h1>
+          <h2 class="hero-subtitle">Aspiring Data Analyst & Technology Specialist</h2>
+          <p class="hero-description">
+            Computer Science graduate with hands-on training in Python, SQL, Excel, Power BI, and modern AI tools. Strong analytical, problem-solving, and communication capabilities focused on business-driven analytics.
           </p>
+          <div class="hero-tags">
+            <span><i class="fa-solid fa-database"></i> SQL / MySQL</span>
+            <span><i class="fa-brands fa-python"></i> Python Analytics</span>
+            <span><i class="fa-solid fa-chart-line"></i> Power BI & Excel</span>
+            <span><i class="fa-solid fa-microchip"></i> GenAI & Prompting</span>
+          </div>
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Explore Work</a>
-            <a href="images/resume.pdf" class="btn btn-secondary" download><i class="fa-solid fa-download"></i> Get Resume</a>
-            <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Let's Talk</a>
+            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+            <a href="images/resume.pdf" class="btn btn-secondary" download><i class="fa-solid fa-download"></i> Download Resume</a>
+            <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Contact Me</a>
           </div>
-        </div>
-
-        <!-- Interactive Terminal Sandbox (Unique Factor) -->
-        <div class="hero-terminal">
-          <div class="terminal-bar">
-            <div class="terminal-dots">
-              <span class="dot-red"></span>
-              <span class="dot-yellow"></span>
-              <span class="dot-green"></span>
-            </div>
-            <div class="terminal-title">omkar@data-engine:~$</div>
-          </div>
-          <div class="terminal-body" id="terminalOutput">
-            <p class="term-line"><span class="term-prompt">guest@omkar:~$</span> welcome</p>
-            <p class="term-info">Initializing analytics console... System ready.</p>
-            <p class="term-info">Type <span class="term-cmd">help</span> to view available terminal commands.</p>
-          </div>
-          <form class="terminal-input-row" id="terminalForm">
-            <span class="term-prompt">guest@omkar:~$</span>
-            <input type="text" id="terminalInput" placeholder="try 'skills', 'metrics', or 'projects'" autocomplete="off" spellcheck="false">
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Real Metrics Highlight Strip -->
-    <section id="metrics" class="metrics-strip">
-      <div class="container metrics-grid">
-        <div class="metric-box">
-          <span class="metric-num">8.53</span>
-          <span class="metric-label">Degree CGPA (SRTMU)</span>
-        </div>
-        <div class="metric-box">
-          <span class="metric-num">3+</span>
-          <span class="metric-label">Full Applied Projects</span>
-        </div>
-        <div class="metric-box">
-          <span class="metric-num">10+</span>
-          <span class="metric-label">Core Analytics & AI Tools</span>
-        </div>
-        <div class="metric-box">
-          <span class="metric-num">100%</span>
-          <span class="metric-label">Hands-On Dataset Training</span>
         </div>
       </div>
     </section>
@@ -108,18 +70,18 @@
     <section id="about" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-microchip"></i> Background</span>
-          <h2 class="section-title">Analytical Profile</h2>
-          <p class="section-subtitle">Bridging computational logic and data discovery</p>
+          <span class="section-tag"><i class="fa-solid fa-user"></i> Identity & Background</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Career objective and technical foundation</p>
         </div>
         <div class="about-grid">
           <div class="card about-main-card">
             <h3>Profile Summary</h3>
             <p>
-              Computer Science graduate with hands-on training in Python, SQL, Excel, Power BI and AI tools. Strong analytical and communication skills with practical experience in data analysis, problem-solving, and technology-based projects.
+              Computer Science graduate with hands-on training in Python, SQL, Excel, Power BI, and AI tools. Possesses strong analytical and communication skills with practical experience in data analysis, problem-solving, and technology-based projects.
             </p>
             <p>
-              Seeking an entry-level Analyst opportunity to apply technical knowledge, AI tools, and structured analytical thinking in a high-impact professional environment.
+              Seeking an entry-level Analyst opportunity to apply technical knowledge, analytical frameworks, AI tools, and structured communication skills in an enterprise environment.
             </p>
             <div class="about-meta-grid">
               <div class="meta-item">
@@ -133,40 +95,40 @@
                 <i class="fa-solid fa-graduation-cap"></i>
                 <div>
                   <span class="label">Degree</span>
-                  <span class="val">B.Sc. CS & IT (8.53 CGPA)</span>
+                  <span class="val">B.Sc. Computer Science & IT</span>
                 </div>
               </div>
               <div class="meta-item">
-                <i class="fa-solid fa-compass"></i>
+                <i class="fa-solid fa-bullseye"></i>
                 <div>
-                  <span class="label">Focus</span>
-                  <span class="val">BI Dashboards & Data Pipelines</span>
+                  <span class="label">Target Role</span>
+                  <span class="val">Entry-Level Data / Technical Analyst</span>
                 </div>
               </div>
             </div>
           </div>
           <div class="card about-spec-card">
-            <h3>Core Differentiators</h3>
+            <h3>Core Attributes</h3>
             <ul class="spec-list">
               <li>
-                <div class="spec-icon"><i class="fa-solid fa-database"></i></div>
+                <i class="fa-solid fa-brain"></i>
                 <div>
-                  <strong>Relational Query Mastery</strong>
-                  <p>Proficient with CTEs, analytical subqueries, window functions, and multi-table joins in MySQL.</p>
+                  <strong>Analytical Thinking</strong>
+                  <p>Translating business questions into structured queries and actionable visual reports.</p>
                 </div>
               </li>
               <li>
-                <div class="spec-icon"><i class="fa-solid fa-chart-column"></i></div>
+                <i class="fa-solid fa-comments"></i>
                 <div>
-                  <strong>End-to-End Business Intelligence</strong>
-                  <p>Transforming raw transactional records into actionable DAX metrics and interactive Power BI models.</p>
+                  <strong>Communication & Collaboration</strong>
+                  <p>Effective teamwork combined with clear presentation of quantitative findings.</p>
                 </div>
               </li>
               <li>
-                <div class="spec-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <i class="fa-solid fa-robot"></i>
                 <div>
-                  <strong>AI-Augmented Productivity</strong>
-                  <p>Leveraging generative tools and prompt engineering to accelerate debugging, data cleaning, and exploration.</p>
+                  <strong>AI Tool Integration</strong>
+                  <p>Prompt engineering and generative AI workflows to streamline analysis pipelines.</p>
                 </div>
               </li>
             </ul>
@@ -179,9 +141,9 @@
     <section id="skills" class="section bg-alt">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-cubes"></i> Architecture</span>
-          <h2 class="section-title">Technical Matrix</h2>
-          <p class="section-subtitle">Categorized competencies verified through hands-on development</p>
+          <span class="section-tag"><i class="fa-solid fa-code"></i> Technical Stack</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Verified tools, languages, and competencies</p>
         </div>
 
         <div class="skills-grid">
@@ -193,12 +155,11 @@
             </div>
             <div class="skill-tags">
               <span class="tag">SQL</span>
-              <span class="tag">Excel</span>
+              <span class="tag">Microsoft Excel</span>
               <span class="tag">Power BI</span>
               <span class="tag">Data Modeling</span>
-              <span class="tag">DAX Measures</span>
+              <span class="tag">DAX</span>
               <span class="tag">Power Query</span>
-              <span class="tag">Business Datasets</span>
             </div>
           </div>
 
@@ -206,7 +167,7 @@
           <div class="card skill-card">
             <div class="skill-card-header">
               <i class="fa-brands fa-python"></i>
-              <h3>Programming & EDA</h3>
+              <h3>Programming & Libraries</h3>
             </div>
             <div class="skill-tags">
               <span class="tag">Python</span>
@@ -214,72 +175,69 @@
               <span class="tag">NumPy</span>
               <span class="tag">Matplotlib</span>
               <span class="tag">Seaborn</span>
-              <span class="tag">File Handling</span>
-              <span class="tag">Exception Handling</span>
+              <span class="tag">File & Exception Handling</span>
             </div>
           </div>
 
-          <!-- Database -->
+          <!-- Databases -->
           <div class="card skill-card">
             <div class="skill-card-header">
-              <i class="fa-solid fa-server"></i>
-              <h3>Database Engineering</h3>
+              <i class="fa-solid fa-database"></i>
+              <h3>Databases</h3>
             </div>
             <div class="skill-tags">
               <span class="tag">MySQL</span>
+              <span class="tag">Relational Modeling</span>
               <span class="tag">Complex Joins</span>
               <span class="tag">Subqueries</span>
               <span class="tag">CTEs</span>
               <span class="tag">Window Functions</span>
-              <span class="tag">Schema Design</span>
-              <span class="tag">CRUD Operations</span>
             </div>
           </div>
 
-          <!-- AI Tools -->
+          <!-- AI & Generative Tech -->
           <div class="card skill-card">
             <div class="skill-card-header">
-              <i class="fa-solid fa-robot"></i>
-              <h3>AI & Generative Tools</h3>
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <h3>AI Tools & Engineering</h3>
             </div>
             <div class="skill-tags">
-              <span class="tag">Prompt Engineering</span>
-              <span class="tag">Generative AI</span>
               <span class="tag">ChatGPT</span>
               <span class="tag">Google Gemini</span>
               <span class="tag">Perplexity AI</span>
               <span class="tag">Microsoft Copilot</span>
+              <span class="tag">Prompt Engineering</span>
+              <span class="tag">Generative AI</span>
             </div>
           </div>
 
-          <!-- Web & Platform Tech -->
+          <!-- Web Technologies -->
           <div class="card skill-card">
             <div class="skill-card-header">
-              <i class="fa-solid fa-code"></i>
-              <h3>Web & Software Stack</h3>
+              <i class="fa-solid fa-laptop-code"></i>
+              <h3>Web Development</h3>
             </div>
             <div class="skill-tags">
-              <span class="tag">PHP</span>
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
-              <span class="tag">Bootstrap</span>
               <span class="tag">JavaScript</span>
-              <span class="tag">Responsive UI</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">PHP</span>
             </div>
           </div>
 
-          <!-- Professional & Workflow Tools -->
+          <!-- Developer Tools & Soft Skills -->
           <div class="card skill-card">
             <div class="skill-card-header">
               <i class="fa-solid fa-toolbox"></i>
-              <h3>Developer Workflow & Soft Skills</h3>
+              <h3>Tools & Professional Skills</h3>
             </div>
             <div class="skill-tags">
               <span class="tag">Git</span>
               <span class="tag">GitHub</span>
               <span class="tag">VS Code</span>
-              <span class="tag">Analytical Thinking</span>
               <span class="tag">Communication</span>
+              <span class="tag">Analytical Thinking</span>
               <span class="tag">Problem Solving</span>
               <span class="tag">Team Collaboration</span>
             </div>
@@ -288,40 +246,40 @@
       </div>
     </section>
 
-    <!-- Technical Training -->
+    <!-- Technical Training Section -->
     <section id="training" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Industry Training</span>
-          <h2 class="section-title">Practical Experience</h2>
-          <p class="section-subtitle">Rigorous, dataset-driven practical exposure</p>
+          <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Hands-On Experience</span>
+          <h2 class="section-title">Technical Training</h2>
+          <p class="section-subtitle">Structured industry curriculum & practical problem-solving</p>
         </div>
 
-        <div class="timeline-container">
-          <div class="card timeline-card">
-            <div class="training-meta">
-              <div>
-                <span class="badge badge-accent">Practical Trainee</span>
-                <h3 class="role-title">Data Analytics with Python Trainee</h3>
-                <div class="org-name"><i class="fa-solid fa-location-arrow"></i> QSpiders, Punjagutta, Hyderabad</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-content">
+              <div class="training-header">
+                <div>
+                  <h3 class="role-title">Data Analytics with Python Trainee</h3>
+                  <div class="org-name"><i class="fa-solid fa-building"></i> QSpiders, Punjagutta, Hyderabad</div>
+                </div>
+                <span class="badge badge-accent">Practical Training</span>
               </div>
-            </div>
-            <div class="training-body">
-              <div class="training-point">
-                <i class="fa-solid fa-check"></i>
-                <p>Completed practical training in Python, SQL, Excel, and Power BI using business-oriented datasets.</p>
-              </div>
-              <div class="training-point">
-                <i class="fa-solid fa-check"></i>
-                <p>Performed EDA, data cleaning, and visualization using Pandas, NumPy, Matplotlib, and Seaborn.</p>
-              </div>
-              <div class="training-point">
-                <i class="fa-solid fa-check"></i>
-                <p>Practiced advanced SQL including joins, subqueries, CTEs, window functions, and analytical queries.</p>
-              </div>
-              <div class="training-point">
-                <i class="fa-solid fa-check"></i>
-                <p>Built Power BI dashboards using DAX, Power Query transformations, and relational data modeling.</p>
+              <ul class="responsibility-list">
+                <li><i class="fa-solid fa-circle-check"></i> Completed practical training in Python, SQL, Excel, and Power BI using business-oriented datasets.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Performed Exploratory Data Analysis (EDA), data cleaning, and visualization using Pandas, NumPy, Matplotlib, and Seaborn.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Practiced advanced SQL operations including joins, subqueries, Common Table Expressions (CTEs), window functions, and analytical queries.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Built interactive Power BI dashboards utilizing DAX measures, Power Query transformations, and robust data modeling.</li>
+              </ul>
+              <div class="tech-pills">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Power BI</span>
+                <span>Excel</span>
+                <span>Pandas</span>
+                <span>DAX</span>
+                <span>Data Modeling</span>
               </div>
             </div>
           </div>
@@ -333,27 +291,30 @@
     <section id="projects" class="section bg-alt">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-terminal"></i> Build Showcase</span>
+          <span class="section-tag"><i class="fa-solid fa-diagram-project"></i> Applied Engineering</span>
           <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Applications delivering concrete solutions</p>
+          <p class="section-subtitle">Full-stack platforms and core analytical software</p>
         </div>
 
         <div class="projects-grid">
           <!-- SmartKrushi -->
-          <div class="card project-card featured-card">
+          <div class="card project-card featured-project">
             <div class="project-header">
-              <div class="badge badge-accent"><i class="fa-solid fa-star"></i> Flagship Platform</div>
+              <div class="project-type"><i class="fa-solid fa-seedling"></i> Full-Stack & AI Architecture</div>
               <h3 class="project-title">SmartKrushi</h3>
               <div class="project-subtitle">AI-Based Crop Advisory & Marketplace Platform</div>
             </div>
             <p class="project-desc">
-              Developed a full-stack agricultural platform designed to bridge the advisory and commercial gap for farmers through intelligent recommendation mechanisms.
+              A full-stack agricultural platform designed to empower farmers with automated intelligence and a direct market venue. Implemented AI-assisted crop recommendations alongside an integrated marketplace architecture.
             </p>
-            <div class="feature-checklist">
-              <div><i class="fa-solid fa-check-double"></i> Developed a full-stack agricultural platform using PHP, Python, and MySQL.</div>
-              <div><i class="fa-solid fa-check-double"></i> Implemented AI-assisted crop recommendations and an integrated farmer marketplace.</div>
-              <div><i class="fa-solid fa-check-double"></i> Designed relational database, authentication, and CRUD functionality.</div>
-              <div><i class="fa-solid fa-check-double"></i> Built responsive interfaces using HTML, CSS, JavaScript, and Bootstrap.</div>
+            <div class="project-highlights">
+              <strong>Key Work & Architecture:</strong>
+              <ul>
+                <li>Developed full-stack architecture using PHP, Python, and MySQL.</li>
+                <li>Implemented AI-assisted crop recommendations and an integrated farmer marketplace.</li>
+                <li>Designed relational database schemas, user authentication, and secure CRUD operations.</li>
+                <li>Built clean, responsive interfaces with HTML, CSS, JavaScript, and Bootstrap.</li>
+              </ul>
             </div>
             <div class="project-tech">
               <span>PHP</span>
@@ -363,9 +324,9 @@
               <span>JavaScript</span>
               <span>Bootstrap</span>
             </div>
-            <div class="project-actions">
+            <div class="project-links">
               <a href="https://github.com/omkarjadhav" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                <i class="fa-brands fa-github"></i> GitHub Source
+                <i class="fa-brands fa-github"></i> GitHub Profile
               </a>
             </div>
           </div>
@@ -373,26 +334,30 @@
           <!-- Banking Information System -->
           <div class="card project-card">
             <div class="project-header">
-              <div class="badge">Systems Architecture</div>
+              <div class="project-type"><i class="fa-solid fa-vault"></i> Core Software Engineering</div>
               <h3 class="project-title">Banking Information System</h3>
-              <div class="project-subtitle">Core Python Architecture</div>
+              <div class="project-subtitle">Terminal & File Handling Architecture</div>
             </div>
             <p class="project-desc">
-              Core Python application engineered with account management, persistent file handling, and robust exception handling for safe execution.
+              A core Python application focused on backend banking mechanisms, transaction safety, and reliable persistence.
             </p>
-            <div class="feature-checklist">
-              <div><i class="fa-solid fa-check-double"></i> Built complete ledger and account operations logic.</div>
-              <div><i class="fa-solid fa-check-double"></i> File persistence mechanism handling edge-case read/writes.</div>
-              <div><i class="fa-solid fa-check-double"></i> Granular error handling for safe account transactions.</div>
+            <div class="project-highlights">
+              <strong>Key Work & Architecture:</strong>
+              <ul>
+                <li>Engineered core Python logic for complete account lifecycle and operations management.</li>
+                <li>Implemented structured file handling routines for persistent record storage.</li>
+                <li>Built robust exception handling mechanisms to secure against edge-case transactional errors.</li>
+              </ul>
             </div>
             <div class="project-tech">
               <span>Python</span>
               <span>File Handling</span>
               <span>Exception Handling</span>
+              <span>Algorithms</span>
             </div>
-            <div class="project-actions">
+            <div class="project-links">
               <a href="https://github.com/omkarjadhav" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                <i class="fa-brands fa-github"></i> Repository
+                <i class="fa-brands fa-github"></i> GitHub Profile
               </a>
             </div>
           </div>
@@ -400,27 +365,30 @@
           <!-- Employee Information System -->
           <div class="card project-card">
             <div class="project-header">
-              <div class="badge">Data Administration</div>
+              <div class="project-type"><i class="fa-solid fa-users-gear"></i> CRUD & Systems Management</div>
               <h3 class="project-title">Employee Information System</h3>
-              <div class="project-subtitle">CRUD & Search Utility</div>
+              <div class="project-subtitle">Data Validation & Administrative Tool</div>
             </div>
             <p class="project-desc">
-              Python-based CRUD application providing streamlined corporate staff search, data entry validation, and indexed record tracking.
+              A Python-based application providing administrative control, employee lookup, and integrity validation.
             </p>
-            <div class="feature-checklist">
-              <div><i class="fa-solid fa-check-double"></i> Structured CRUD flow for enterprise employee entities.</div>
-              <div><i class="fa-solid fa-check-double"></i> Rapid employee query and search algorithms.</div>
-              <div><i class="fa-solid fa-check-double"></i> Comprehensive schema field validation guards.</div>
+            <div class="project-highlights">
+              <strong>Key Work & Architecture:</strong>
+              <ul>
+                <li>Developed full CRUD functionality for managing corporate employee databases.</li>
+                <li>Engineered multi-parameter search algorithms to instantly filter records.</li>
+                <li>Implemented strict input validation routines to prevent corrupt data entry.</li>
+              </ul>
             </div>
             <div class="project-tech">
               <span>Python</span>
-              <span>CRUD</span>
+              <span>CRUD Operations</span>
               <span>Search Algorithms</span>
               <span>Data Validation</span>
             </div>
-            <div class="project-actions">
+            <div class="project-links">
               <a href="https://github.com/omkarjadhav" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                <i class="fa-brands fa-github"></i> Repository
+                <i class="fa-brands fa-github"></i> GitHub Profile
               </a>
             </div>
           </div>
@@ -432,120 +400,202 @@
     <section id="education" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-book-bookmark"></i> Academic Credentials</span>
+          <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic History</span>
           <h2 class="section-title">Education</h2>
-          <p class="section-subtitle">Consistent quantitative and computational background</p>
+          <p class="section-subtitle">Academic foundations and credentials</p>
         </div>
 
         <div class="education-grid">
-          <div class="card edu-card highlight-edu">
+          <!-- University Degree -->
+          <div class="card edu-card">
             <div class="edu-top">
-              <span class="edu-date">2023 — 2026</span>
+              <span class="edu-year"><i class="fa-regular fa-calendar"></i> 2023 — 2026</span>
               <span class="badge badge-accent">CGPA: 8.53 / 10.0</span>
             </div>
-            <h3 class="edu-title">Bachelor of Computer Science & Information Technology</h3>
-            <div class="edu-inst"><i class="fa-solid fa-university"></i> SRTM University, Nanded</div>
-            <p class="edu-desc">In-depth coursework in Relational Database Management Systems, Data Structures, Software Engineering, and Modern Computing Technologies.</p>
+            <h3 class="edu-degree">Bachelor of Computer Science & Information Technology</h3>
+            <div class="edu-inst"><i class="fa-solid fa-school"></i> SRTM University, Nanded</div>
+            <p class="edu-desc">Comprehensive undergraduate curriculum covering computational theory, software design, relational database architecture, and information systems.</p>
           </div>
 
+          <!-- HSC -->
           <div class="card edu-card">
             <div class="edu-top">
-              <span class="edu-date">2020 — 2022</span>
+              <span class="edu-year"><i class="fa-regular fa-calendar"></i> 2020 — 2022</span>
               <span class="badge">Score: 67.20%</span>
             </div>
-            <h3 class="edu-title">Higher Secondary Certificate (HSC)</h3>
-            <div class="edu-inst"><i class="fa-solid fa-school"></i> Sri Gayatri Junior College</div>
-            <p class="edu-desc">Higher secondary curriculum focused on Mathematics, Physics, and analytical foundations.</p>
+            <h3 class="edu-degree">Higher Secondary Certificate (HSC)</h3>
+            <div class="edu-inst"><i class="fa-solid fa-building-columns"></i> Sri Gayatri Junior College</div>
+            <p class="edu-desc">Higher secondary education with focused coursework in mathematical foundations and science disciplines.</p>
           </div>
 
+          <!-- SSC -->
           <div class="card edu-card">
             <div class="edu-top">
-              <span class="edu-date">2020</span>
+              <span class="edu-year"><i class="fa-regular fa-calendar"></i> 2020</span>
               <span class="badge">Score: 74.80%</span>
             </div>
-            <h3 class="edu-title">Secondary School Certificate (SSC)</h3>
-            <div class="edu-inst"><i class="fa-solid fa-building-columns"></i> Rajarshi Shahu School</div>
-            <p class="edu-desc">Secondary education emphasizing fundamental sciences, analytical reasoning, and mathematics.</p>
+            <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
+            <div class="edu-inst"><i class="fa-solid fa-book-open"></i> Rajarshi Shahu School</div>
+            <p class="edu-desc">Foundational secondary education with strong quantitative and analytical fundamentals.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Contact Section -->
-    <section id="contact" class="section bg-alt">
+    <!-- Testimonials Section (Carousel UI with Placeholder Notice) -->
+    <section id="testimonials" class="section bg-alt">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i class="fa-solid fa-envelope-open-text"></i> Connect</span>
-          <h2 class="section-title">Let's Discuss Opportunities</h2>
-          <p class="section-subtitle">Open to Data Analyst, Business Intelligence, and Technology roles</p>
+          <span class="section-tag"><i class="fa-solid fa-quote-left"></i> Endorsements</span>
+          <h2 class="section-title">Professional Recommendations</h2>
+          <p class="section-subtitle">Interactive testimonial module (Awaiting corporate recommendations)</p>
         </div>
 
-        <div class="contact-layout">
-          <div class="card contact-info-card">
-            <h3>Direct Touchpoints</h3>
-            <p>Ready to deploy my data analytics and problem-solving skills to your team.</p>
-            
-            <div class="contact-list">
-              <a href="mailto:omkarjadhav3560@gmail.com" class="contact-link">
-                <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+        <div class="testimonial-carousel-wrapper">
+          <div class="carousel-container" id="testimonialCarousel">
+            <!-- Slide 1 -->
+            <div class="testimonial-card active">
+              <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+              <p class="placeholder-notice">[ Placeholder Component: Professional recommendation to be added ]</p>
+              <p class="testimonial-quote">
+                "Demonstrated rigorous discipline in SQL and analytical problem solving throughout dataset exercises. Consistently delivered structured, reliable data models."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><i class="fa-solid fa-user-tie"></i></div>
                 <div>
-                  <span class="contact-label">Email</span>
-                  <span class="contact-val">omkarjadhav3560@gmail.com</span>
+                  <h4>Technical Mentor / Academic Evaluator</h4>
+                  <span>QSpiders / Academic Reference (Placeholder)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+              <p class="placeholder-notice">[ Placeholder Component: Professional recommendation to be added ]</p>
+              <p class="testimonial-quote">
+                "Strong full-stack architectural reasoning and execution on the SmartKrushi project, combining clean database structures with functional AI integrations."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><i class="fa-solid fa-user-gear"></i></div>
+                <div>
+                  <h4>Project Collaborator / Peer Lead</h4>
+                  <span>SRTM University Project Team (Placeholder)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-card">
+              <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+              <p class="placeholder-notice">[ Placeholder Component: Professional recommendation to be added ]</p>
+              <p class="testimonial-quote">
+                "Shows great initiative in adopting generative AI workflows and modern business intelligence dashboards to simplify complex analytical queries."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><i class="fa-solid fa-id-badge"></i></div>
+                <div>
+                  <h4>Industry Assessor</h4>
+                  <span>Data Systems Review (Placeholder)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="carousel-controls">
+            <button class="carousel-btn prev-btn" id="prevTestimonial" aria-label="Previous Testimonial">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="carousel-indicators" id="carouselIndicators">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+            </div>
+            <button class="carousel-btn next-btn" id="nextTestimonial" aria-label="Next Testimonial">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Communication Hub</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Reach out for data analytics roles, projects, or collaborations</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Verified Contact Details -->
+          <div class="card contact-card">
+            <h3>Direct Contact</h3>
+            <p>Feel free to reach out directly through email, phone, or professional networks.</p>
+
+            <div class="contact-methods">
+              <a href="mailto:omkarjadhav3560@gmail.com" class="contact-item">
+                <div class="icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="method-label">Email</span>
+                  <span class="method-val">omkarjadhav3560@gmail.com</span>
                 </div>
               </a>
 
-              <a href="tel:+919505164754" class="contact-link">
-                <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+              <a href="tel:+919505164754" class="contact-item">
+                <div class="icon-wrap"><i class="fa-solid fa-phone"></i></div>
                 <div>
-                  <span class="contact-label">Phone</span>
-                  <span class="contact-val">+91 9505164754</span>
+                  <span class="method-label">Phone</span>
+                  <span class="method-val">+91 9505164754</span>
                 </div>
               </a>
 
-              <div class="contact-link static">
-                <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-item">
+                <div class="icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
                 <div>
-                  <span class="contact-label">Location</span>
-                  <span class="contact-val">Nanded, Maharashtra, India</span>
+                  <span class="method-label">Location</span>
+                  <span class="method-val">Nanded, Maharashtra, India</span>
                 </div>
               </div>
 
-              <a href="https://linkedin.com/in/omkar-jadhav" target="_blank" rel="noopener noreferrer" class="contact-link">
-                <div class="icon-circle"><i class="fa-brands fa-linkedin-in"></i></div>
+              <a href="https://linkedin.com/in/omkar-jadhav" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="icon-wrap"><i class="fa-brands fa-linkedin-in"></i></div>
                 <div>
-                  <span class="contact-label">LinkedIn</span>
-                  <span class="contact-val">linkedin.com/in/omkar-jadhav</span>
+                  <span class="method-label">LinkedIn</span>
+                  <span class="method-val">linkedin.com/in/omkar-jadhav</span>
                 </div>
               </a>
 
-              <a href="https://github.com/omkarjadhav" target="_blank" rel="noopener noreferrer" class="contact-link">
-                <div class="icon-circle"><i class="fa-brands fa-github"></i></div>
+              <a href="https://github.com/omkarjadhav" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="icon-wrap"><i class="fa-brands fa-github"></i></div>
                 <div>
-                  <span class="contact-label">GitHub</span>
-                  <span class="contact-val">github.com/omkarjadhav</span>
+                  <span class="method-label">GitHub</span>
+                  <span class="method-val">github.com/omkarjadhav</span>
                 </div>
               </a>
             </div>
           </div>
 
-          <div class="card contact-form-card">
-            <h3>Quick Email Launcher</h3>
-            <p>Prefills your local mail client with clean formatting.</p>
-            <form onsubmit="return handleFormSubmit(event)">
-              <div class="input-group">
-                <label for="contactName">Your Name</label>
-                <input type="text" id="contactName" required placeholder="Recruiter / Collaborator Name">
+          <!-- Interactive Static Mailto Form -->
+          <div class="card contact-card">
+            <h3>Send a Message</h3>
+            <form id="contactForm" onsubmit="return handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required placeholder="Jane Doe" class="form-input">
               </div>
-              <div class="input-group">
-                <label for="contactSubject">Subject</label>
-                <input type="text" id="contactSubject" required placeholder="Data Analyst Opportunity / Inquiry">
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" required placeholder="Data Analyst Opportunity / Inquiry" class="form-input">
               </div>
-              <div class="input-group">
-                <label for="contactMessage">Message</label>
-                <textarea id="contactMessage" rows="4" required placeholder="Hi Omkar, we reviewed your projects and would love to discuss..."></textarea>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required placeholder="Write your message here..." class="form-input"></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-block">
-                <i class="fa-solid fa-paper-plane"></i> Launch Email Draft
+                <i class="fa-solid fa-paper-plane"></i> Draft Direct Email
               </button>
             </form>
           </div>
@@ -556,24 +606,24 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-branding">
-        <span class="logo-box">OJ</span>
-        <div>
-          <h4>Omkar Jadhav</h4>
-          <p>Computer Science Graduate & Data Analyst</p>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="nav-logo">
+          <span class="logo-box">O</span>
+          <span class="logo-text">OMKAR JADHAV</span>
         </div>
+        <p class="footer-desc">Computer Science Graduate | Aspiring Data Analyst</p>
       </div>
-      <div class="footer-socials">
+      <div class="footer-social">
         <a href="https://github.com/omkarjadhav" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/omkar-jadhav-80799b2a5/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://linkedin.com/in/omkar-jadhav" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="mailto:omkarjadhav3560@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         <a href="tel:+919505164754" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; <span id="currentYear"></span> Omkar Jadhav. Hosted directly on GitHub Pages.</p>
+        <p>&copy; <span id="currentYear"></span> Omkar Jadhav. All Rights Reserved. Built for static deployment on GitHub Pages.</p>
       </div>
     </div>
   </footer>

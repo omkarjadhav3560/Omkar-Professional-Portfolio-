@@ -1,17 +1,17 @@
 /**
- * Omkar Jadhav Portfolio Engine
- * Includes Interactive Hero Terminal, Smooth Scroll Observer, and Contact Workflow
+ * Personal Portfolio Application Logic
+ * Omkar Jadhav - Data Analyst & Technology Specialist
  */
 
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNavigation();
   initActiveNavOnScroll();
   initDynamicYear();
-  initInteractiveTerminal();
+  initTestimonialCarousel();
 });
 
 /**
- * Mobile Drawer Menu
+ * Mobile Drawer Menu Functionality
  */
 function initMobileNavigation() {
   const navToggle = document.getElementById("navToggle");
@@ -20,6 +20,7 @@ function initMobileNavigation() {
 
   if (!navToggle || !navMenu) return;
 
+  // Toggle drawer open/close
   navToggle.addEventListener("click", () => {
     navMenu.classList.toggle("open");
     const isOpen = navMenu.classList.contains("open");
@@ -29,6 +30,7 @@ function initMobileNavigation() {
       : '<i class="fa-solid fa-bars"></i>';
   });
 
+  // Close menu upon clicking any nav link
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       if (navMenu.classList.contains("open")) {
@@ -38,26 +40,43 @@ function initMobileNavigation() {
       }
     });
   });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      navMenu.classList.contains("open") &&
+      !navMenu.contains(e.target) &&
+      !navToggle.contains(e.target)
+    ) {
+      navMenu.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", false);
+      navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }
+  });
 }
 
 /**
- * Active Navigation Indicator on Scroll
+ * Active Navigation Link State on Scroll
  */
 function initActiveNavOnScroll() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
 
-  function updateActive() {
-    const scrollPos = window.scrollY + 120;
-    sections.forEach((sec) => {
-      const top = sec.offsetTop;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute("id");
+  function updateActiveLink() {
+    const scrollPosition = window.scrollY + 120;
 
-      if (scrollPos >= top && scrollPos < top + height) {
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
         navLinks.forEach((link) => {
           link.classList.remove("active");
-          if (link.getAttribute("href") === `#${id}`) {
+          if (link.getAttribute("href") === `#${sectionId}`) {
             link.classList.add("active");
           }
         });
@@ -65,113 +84,124 @@ function initActiveNavOnScroll() {
     });
   }
 
-  window.addEventListener("scroll", updateActive, { passive: true });
-  updateActive();
+  window.addEventListener("scroll", updateActiveLink, { passive: true });
+  updateActiveLink();
 }
 
 /**
- * Dynamic Copyright Year
+ * Dynamic Current Year Injection
  */
 function initDynamicYear() {
-  const yearSpan = document.getElementById("currentYear");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
+  const currentYearSpan = document.getElementById("currentYear");
+  if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
   }
 }
 
 /**
- * Interactive Hero Terminal Sandbox
- * Gives recruiters a unique, hands-on console to test commands
+ * Testimonial Carousel Mechanism
  */
-function initInteractiveTerminal() {
-  const form = document.getElementById("terminalForm");
-  const input = document.getElementById("terminalInput");
-  const output = document.getElementById("terminalOutput");
+function initTestimonialCarousel() {
+  const slides = document.querySelectorAll(".testimonial-card");
+  const dots = document.querySelectorAll(".carousel-indicators .dot");
+  const prevBtn = document.getElementById("prevTestimonial");
+  const nextBtn = document.getElementById("nextTestimonial");
 
-  if (!form || !input || !output) return;
+  if (!slides.length) return;
 
-  const commands = {
-    help: () => `Available commands:
-• <span class="term-cmd">skills</span>   - List primary technical competencies
-• <span class="term-cmd">metrics</span>  - Display academic and project numbers
-• <span class="term-cmd">projects</span> - View featured application names
-• <span class="term-cmd">contact</span>  - View direct email and phone
-• <span class="term-cmd">clear</span>    - Clear the terminal screen`,
-    
-    skills: () => `Technical Skills Matrix:
-• Analytics: SQL, Power BI, Excel, Data Modeling, DAX
-• Programming: Python (Pandas, NumPy, Matplotlib, Seaborn)
-• Database: MySQL (Joins, CTEs, Window Functions)
-• AI Tools: Prompt Engineering, ChatGPT, Copilot, Gemini`,
+  let currentIndex = 0;
+  let autoplayTimer = null;
 
-    metrics: () => `Key Performance Indicators:
-• Degree CGPA: 8.53 / 10.0 (SRTM University)
-• Practical Training: QSpiders Data Analytics with Python
-• Core Projects: SmartKrushi, Banking System, Employee System`,
-
-    projects: () => `Portfolio Projects:
-1. SmartKrushi (AI Crop Advisory & Farmer Marketplace)
-2. Banking Information System (Core Python + Persistence)
-3. Employee Information System (CRUD + Search Engine)`,
-
-    contact: () => `Contact Details:
-• Email: omkarjadhav3560@gmail.com
-• Phone: +91 9505164754
-• LinkedIn: https://www.linkedin.com/in/omkar-jadhav-80799b2a5/c`,
-
-    clear: () => {
-      output.innerHTML = "";
-      return null;
-    }
-  };
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const cmd = input.value.trim().toLowerCase();
-    if (!cmd) return;
-
-    // Append user input line
-    const userLine = document.createElement("p");
-    userLine.className = "term-line";
-    userLine.innerHTML = `<span class="term-prompt">guest@omkar:~$</span> ${escapeHTML(cmd)}`;
-    output.appendChild(userLine);
-
-    // Process command response
-    if (commands[cmd]) {
-      const response = commands[cmd]();
-      if (response) {
-        const respLine = document.createElement("div");
-        respLine.className = "term-info";
-        respLine.innerHTML = response.replace(/\n/g, "<br>");
-        output.appendChild(respLine);
-      }
+  function showSlide(index) {
+    // Wrap around boundaries
+    if (index < 0) {
+      currentIndex = slides.length - 1;
+    } else if (index >= slides.length) {
+      currentIndex = 0;
     } else {
-      const errLine = document.createElement("p");
-      errLine.className = "term-info";
-      errLine.innerHTML = `command not found: "${escapeHTML(cmd)}". Type <span class="term-cmd">help</span> for commands.`;
-      output.appendChild(errLine);
+      currentIndex = index;
     }
 
-    input.value = "";
-    output.scrollTop = output.scrollHeight;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === currentIndex);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(nextSlide, 6500);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      startAutoplay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      startAutoplay();
+    });
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const targetIndex = parseInt(dot.getAttribute("data-index"), 10);
+      showSlide(targetIndex);
+      startAutoplay();
+    });
   });
 
-  function escapeHTML(str) {
-    return str.replace(/[&<>'"]/g, 
-      tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-    );
+  // Pause on hover
+  const carouselWrapper = document.querySelector(".testimonial-carousel-wrapper");
+  if (carouselWrapper) {
+    carouselWrapper.addEventListener("mouseenter", stopAutoplay);
+    carouselWrapper.addEventListener("mouseleave", startAutoplay);
   }
+
+  startAutoplay();
 }
 
 /**
- * Mailto Form Action
+ * Contact Form Direct Email Draft Action
  */
 function handleFormSubmit(event) {
   event.preventDefault();
-  const name = encodeURIComponent(document.getElementById("contactName").value.trim());
-  const subject = encodeURIComponent(document.getElementById("contactSubject").value.trim());
-  const message = encodeURIComponent(document.getElementById("contactMessage").value.trim() + `\n\n— From: ${decodeURIComponent(name)}`);
 
-  window.location.href = `mailto:omkarjadhav3560@gmail.com?subject=${subject}&body=${message}`;
+  const nameInput = document.getElementById("name");
+  const subjectInput = document.getElementById("subject");
+  const messageInput = document.getElementById("message");
+
+  const name = encodeURIComponent(nameInput ? nameInput.value.trim() : "");
+  const subject = encodeURIComponent(subjectInput ? subjectInput.value.trim() : "Portfolio Contact");
+  const message = encodeURIComponent(
+    (messageInput ? messageInput.value.trim() : "") + `\n\n— Sent by ${decodeURIComponent(name)}`
+  );
+
+  const destinationEmail = "omkarjadhav3560@gmail.com";
+  const mailtoUrl = `mailto:${destinationEmail}?subject=${subject}&body=${message}`;
+
+  window.location.href = mailtoUrl;
   return false;
 }
