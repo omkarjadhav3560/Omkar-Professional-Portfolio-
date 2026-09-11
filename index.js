@@ -117,7 +117,7 @@ function initInteractiveTerminal() {
     contact: () => `Contact Details:
 • Email: omkarjadhav3560@gmail.com
 • Phone: +91 9505164754
-• LinkedIn: linkedin.com/in/omkar-jadhav`,
+• LinkedIn: https://www.linkedin.com/in/omkar-jadhav-80799b2a5/c`,
 
     clear: () => {
       output.innerHTML = "";
